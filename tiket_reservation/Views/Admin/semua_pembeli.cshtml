@@ -1,0 +1,70 @@
+﻿@Html.Partial("_HeaderAdmin")
+@model IEnumerable<tiket_reservation.Models.Gabungan>
+<div class="table-users col-md-10 col-md-offset-2 container">
+    <div style="margin-top: 70px;" class="page-header text-center well">
+        <div class="col-md-12 ">
+            <div class="col-md-13">
+
+                <h1 class="judul">List Semua Pembeli</h1>
+                <hr class="Garistema">
+            </div>
+        </div>
+        @{
+            int i = 1;
+        }
+        <div style="font-size: 3px;" class="bs-component">
+            <table class="table table-hover jadi-vertical">
+                <thead>
+                    <tr class="headerTengah" id="warnaTr">
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Email Utama</th>
+                        <th>No Handphone</th>
+                        <th>Kotak Validasi Tiket</th>
+                        <th>Status</th>
+                        <th colspan="3">Tindakan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var data in Model)
+                    {
+                        <tr class="">
+                            <td class="text-center tengah pagination-centered">@i</td>
+                            <td class="text-center pagination-centered">
+                                @data.tblPembeli.nm_pembeli
+                            </td>
+                            <td class="text-center pagination-centered">
+                                @data.tblPembeli.email_pembeli
+                            </td>
+                            <td class="text-center pagination-centered">
+                                @data.tblPembeli.hp_pembeli
+                            </td>
+                            <td class="text-center tengah-table pagination-centered">
+                                @if (@data.tblValidasi.pilihan_bank == null)
+                                {
+                                    @Html.Raw("Belum Validasi Tiket")
+                                }
+                                else
+                                {
+                                    @data.tblValidasi.pilihan_bank
+                                }
+                            <td class="text-center tengah-table pagination-centered">
+                                @(data.tblDetailTiket.total_transfer != 0 ? "Lunas" : "Belum Lunas")
+                            </td>
+                            <td id="btn-edit" class="tengah text-center">
+                                <a class="btn btn-raised btn-info"
+                                   href="@Url.Action("user_detail", "admin", new { id = @data.tblPembeli.id_pembeli })">
+                                    Detail
+                                </a>
+                            </td>
+                        </tr>
+                        i++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+@Html.Partial("_Footer")

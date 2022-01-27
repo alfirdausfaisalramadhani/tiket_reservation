@@ -1,0 +1,116 @@
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\tiket_reservation.dll.config
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\tiket_reservation.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\tiket_reservation.pdb
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\csc.exe
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\csc.exe.config
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\csc.rsp
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\csi.exe
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\csi.rsp
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\System.AppContext.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\System.Collections.Immutable.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\System.IO.FileSystem.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\System.Reflection.Metadata.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\vbc.exe
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\vbc.exe.config
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\vbc.rsp
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\VBCSCompiler.exe
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\roslyn\VBCSCompiler.exe.config
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\Antlr3.Runtime.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\Microsoft.Web.Infrastructure.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\Newtonsoft.Json.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.Helpers.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.Mvc.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.Optimization.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.Razor.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.Deployment.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.Razor.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\WebGrease.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.Helpers.xml
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.Mvc.xml
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.Optimization.xml
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.Razor.xml
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.xml
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.Deployment.xml
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.Razor.xml
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\Newtonsoft.Json.xml
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\Antlr3.Runtime.pdb
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.csproj.AssemblyReference.cache
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.csproj.CoreCompileInputs.cache
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.csproj.CopyComplete
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.dll
+D:\KULIAH\FILE PRAKTIKAN LEPKOM\Proyek C#\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.pdb
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\tiket_reservation.dll.config
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\tiket_reservation.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\tiket_reservation.pdb
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\csc.exe
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\csc.exe.config
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\csc.rsp
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\csi.exe
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\csi.rsp
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\System.AppContext.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\System.Collections.Immutable.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\System.IO.FileSystem.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\System.Reflection.Metadata.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\vbc.exe
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\vbc.exe.config
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\vbc.rsp
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\VBCSCompiler.exe
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\roslyn\VBCSCompiler.exe.config
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\Antlr3.Runtime.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\EntityFramework.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\EntityFramework.SqlServer.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\Microsoft.Web.Infrastructure.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\Newtonsoft.Json.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.Helpers.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.Mvc.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.Optimization.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.Razor.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.Deployment.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.Razor.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\WebGrease.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\EntityFramework.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\EntityFramework.SqlServer.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.Helpers.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.Mvc.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.Optimization.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.Razor.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.Deployment.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\System.Web.WebPages.Razor.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\Newtonsoft.Json.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\Antlr3.Runtime.pdb
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.csproj.AssemblyReference.cache
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.csproj.CoreCompileInputs.cache
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.csproj.CopyComplete
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.dll
+D:\4IA09\LEPKOM\tiket_reservation\tiket_reservation\obj\Debug\tiket_reservation.pdb

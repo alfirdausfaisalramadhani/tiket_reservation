@@ -1,0 +1,60 @@
+﻿@model tiket_reservation.pembeli
+<body>
+    <br>
+    <br>
+    <div class="container ">
+        <div class="login col-md-4 col-md-offset-4 well ">
+            <div class="form-group text-center">
+                <h1 style="text-align: center;" class="judul ">
+                    Login Akun <i class="fa fa-users fa-fw" aria-hidden="true"></i>
+                </h1>
+                <hr class="garisLogin">
+            </div>
+            <div class="col-md-11">
+                @using (Html.BeginForm("Login_user", "Home", FormMethod.Post, new
+                {
+                    @class = "form-horizontal daftar text-center",
+                    role = "form"
+                }))
+                {
+                    <div id="ketikEmail" class="form-group @ViewBag.htmlError">
+                        <div class="input-group ">
+                            <span class="input-group-addon">
+                                <i class="fa fa-user-circle-o fa-lg"
+                                   aria-hidden="true"></i>
+                            </span>
+                            @Html.TextBoxFor(u => u.email_pembeli, new { @class = "form-control", @placeholder = "Masukan Email", @type = "email" })
+                        </div>
+                    </div>
+                    <div id="ketikPass" class="form-group @ViewBag.htmlError ">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-eye-slash fa-lg"></i>
+                            </span>
+                            @Html.TextBoxFor(u => u.password, new
+                            {
+                                @class = "form-control",
+                            @placeholder = "Masukan Password",
+                                @type = "password"
+                            })
+                        </div>
+                    </div>
+                    <div>
+                        <label style="margin-left: 25px; margin-top: 15px; color: #d32f2f !important;">
+                            @ViewBag.errorMessage
+                        </label>
+                    </div>
+                    <div style="text-align: center;" id="pesan" class="form-group ">
+                        <a class=" btn btn-raised btn-info btn-md"
+                           href="@Url.Action("daftar", "Home")">Daftar</a>
+                        <button id="login" class="btn btn-raised btn-primary"
+                                type="submit">
+                            Masuk
+                        </button>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+@Html.Partial("_Footer")

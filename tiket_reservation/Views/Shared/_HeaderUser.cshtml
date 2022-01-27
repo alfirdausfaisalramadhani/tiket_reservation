@@ -1,0 +1,91 @@
+﻿<body>
+    <div id="navbarpro" class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target=".navbar-inverse-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@Url.Action("dashboard", "user")">
+
+                    Dashboard Tiket <i style="padding-left: 6px;"
+                                       class="fa fa-users fa-fw " aria-hidden="true"></i>
+
+                    <div class="ripple-container">
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-collapse navbar-inverse-collapse collapse">
+                <form class="navbar-form navbar-left ">
+                    <!--<div class="form-group">
+                    <button class="btn btn-raised" type="sumbit">Cari</button>
+                    </div>-->
+                </form>
+                <ul class="nav-drop nav navbar-nav navbar-right">
+                    <li class="dropdown">
+
+                        <a href="#" data-target="dropdown" class="dropdown-toggle" data-
+                           toggle="dropdown">
+
+                            <i class="fa fa-cog fa-spin fa-fw"></i>
+                            Login Sebagai : @Session["user"].ToString() <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="@Url.Action("log_out", "user")">
+                                    Log Out <i class="fafa-sign-out"></i>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Bantuan </a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="nav-side-menu">
+        <div class="brand">
+            <i class="fa fa-shopping-basket fa-fw" aria-hidden="true"></i>
+            Halaman Pembeli
+        </div>
+
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-
+           target="#menu-content"></i>
+
+        <div class="menu-list">
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                    <a style="display: block;" href="@Url.Action("dashboard", "user")">
+                        <i class="fa fa-home fa-lg"></i>Halaman Utama
+                    </a>
+                </li>
+                <li data-toggle="collapse" data-target="#data">
+                    <a href="#">
+                        <i class="fa fa-book fa-lg"></i>Data Pembeli <span class="arrow"></span>
+                    </a>
+                </li>
+                <ul class="sub-menu collapse" id="data">
+                    <li class="active">
+                        <a href="@Url.Action("data_pembeli", "user")">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            Data Pemesan
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="@Url.Action("ketentuan", "user")">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                            Ketentuan
+                        </a>
+                    </li>
+                </ul>
+                <li>
+                    <a style="display: block;" href="@Url.Action("validasi_tiket","user")">
+                        <i class="fa fa-shield fa-lg"></i>Validasi Tiket
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>

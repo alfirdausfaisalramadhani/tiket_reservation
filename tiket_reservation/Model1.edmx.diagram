@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b43004f83b504286862a0b5b4c354140" Name="Diagram1">
+        <EntityTypeShape EntityType="tiket_reservationModel.admin" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tiket_reservationModel.detil_pesan_tiket" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="tiket_reservationModel.pajak_bandara" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="tiket_reservationModel.pembeli" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tiket_reservationModel.pembeli_validasi" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tiket_reservationModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tiket_reservationModel.tgl_pesan" Width="1.5" PointX="4.75" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="tiket_reservationModel.FK_detil_pesan_tiket_pajak_bandara_berangkat" ManuallyRouted="false" />
+        <AssociationConnector Association="tiket_reservationModel.FK_detil_pesan_tiket_pajak_bandara_tujuan" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

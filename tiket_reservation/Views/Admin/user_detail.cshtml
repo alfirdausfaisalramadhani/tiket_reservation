@@ -1,0 +1,391 @@
+﻿@Html.Partial("_HeaderAdmin")
+@model tiket_reservation.Models.Gabungan
+<body>
+    <div class="table-users col-md-10 col-md-offset-2 container">
+        <div style="margin-top: 70px;"
+             class="page-header text-center well col-md-12">
+            <div>
+                <div class="col-md-10 col-md-offset-1">
+                    <h1 style="font-size: 30px;" class="judul">
+                        Detail Informasi
+                        Pembeli
+                    </h1>
+                    <hr class="Garistema">
+                </div>
+                <div style="margin-top: -20px;" class="col-md-10">
+                    <div class="col-md-9 col-md-offset-1" style="margin-bottom: -15px;">
+                        <br> <label style="margin-left: 16px;" class="control-label ">
+                            Data Pribadi
+                        </label>
+                        <hr class="garisbagian">
+                    </div>
+                    <div class="col-md-12 col-md-offset-1">
+                        @using (Html.BeginForm("user_detail", "admin", new
+                        {
+                            id =
+                        Model.tblPembeli.id_pembeli
+                        }, FormMethod.Post, new
+                        {
+                            @class =
+                        "form-horizontal daftar text-center",
+                            role = "form"
+                        }))
+                        {
+                            <div class="col-md-4">
+                                <div id="ketikEmail" class="form-group ">
+                                    <div class="input-group ">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-user-circle-o fa-lg detailDashIcon"
+                                               aria-hidden="true"></i>
+                                        </span> <label for="nama " class="control-label">Nama Peserta</label>
+                                        @Html.TextBoxFor(u => u.tblPembeli.nm_pembeli, new { @class = "form-control", @placeholder = "Nama", @type = "name" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-md-offset-1">
+                                <div id="ketikPass" class="form-group ">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-envelope fa-lg detailDashIcon" ariahidden="true"></i>
+                                        </span>
+                                        <label for="email " class="control-label">
+                                            Email
+                                            Peserta
+                                        </label>
+                                        @Html.TextBoxFor(u => u.tblPembeli.email_pembeli, new
+                                        {
+                                            @class =
+                                        "form-control",
+                                            @placeholder = "Email",
+                                            @type = "email"
+                                        })
+                                    </div>
+                                </div>
+                            </div><div class="col-md-9 ">
+                                <div id="ketikEmail" class="form-group ">
+                                    <div class="input-group ">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-eye-slash fa-lg detailDashIcon"
+                                               aria-hidden="true"></i>
+                                        </span> <label for="password " class="control-label">
+                                            Password Peserta (Encrypted PBKDF2
+                                            Algorithm)
+                                        </label>
+                                        @Html.TextBoxFor(u => u.tblPembeli.password, new { @class = "form-control", @placeholder = "Password", @type = "text" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 ">
+                                <div id="ketikEmail" class="form-group ">
+                                    <div class="input-group ">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-phone-square fa-lg detailDashIcon"
+                                               aria-hidden="true"></i>
+                                        </span> <label for="hp " class="control-label">
+                                            No Handphone
+                                        </label>
+                                        @Html.TextBoxFor(u => u.tblPembeli.hp_pembeli, new { @class = "form-control", @placeholder = "Hp", @type = "text" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-md-offset-1" style="margin-left: 4px;">
+                                <div id="ketikEmail" class="form-group ">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-user fa-lg detailDashIcon" aria-hidden="true"></i>
+                                        </span>
+                                        <label for="gender " class="control-label"> Gender</label>
+                                        @Html.TextBoxFor(u => u.tblPembeli.gd_pembeli, new
+                                        {
+                                            @readonly =
+                                    "readonly",
+                                            @class = "form-control",
+                                            @placeholder = "Hp",
+                                            @type =
+                                    "text"
+                                        })
+                                    </div>
+                                </div>
+                            </div><div style="margin-left: -15px;">
+                                <div class="col-md-9" style="margin-top: 25px;">
+                                    <br> <label style="margin-left: 15px;"
+                                                class="control-label">Tujuan Penerbangan</label>
+                                    <hr class="garisbagian">
+                                </div>
+                                <div class="col-md-12" style="margin-top: -30px;">
+                                    <div class="col-md-12 ">
+                                        <div class="col-md-5 ">
+                                            <div id="ketikEmail" class="form-group ">
+                                                <div class="input-group ">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-plane fa-lg detailDashIcon" aria-hidden="true"></i>
+                                                    </span>
+                                                    <label for="nama " class="control-label">
+                                                        Bandara Keberangkatan
+                                                    </label>
+                                                    @Html.TextBoxFor(u => u.nm_bandara_berangkat, new
+                                                    {
+                                                        @readonly =
+"readonly",
+                                                        @class = "form-control",
+                                                        @placeholder = "Berangkat",
+@type = "text"
+                                                    })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-md-offset-1">
+                                            <div id="ketikPass" class="form-group ">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-plane fa-lg detailDashIcon" aria-hidden="true"></i>
+                                                    </span>
+                                                    <label for="nama " class="control-label">
+                                                        Bandara Tujuan
+                                                    </label>
+                                                    @Html.TextBoxFor(u => u.nm_bandara_tujuan, new
+                                                    {
+                                                      @readonly =
+                                                    "readonly",
+                                                        @class = "form-control",
+                                                        @placeholder = "Tujuan",
+                                                        @type
+                                                    = "text"
+                                                    })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 ">
+                                        <div class="col-md-5 ">
+                                            <div id="ketikEmail" class="form-group ">
+                                                <div class="input-group ">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-plane fa-lg detailDashIcon" aria-hidden="true"></i>
+                                                    </span>
+                                                    <label for="nama " class="control-label">
+                                                        Pajak Keberangkatan
+                                                    </label>
+                                                    @Html.TextBoxFor(u => u.rp_bandara_berangkat, new
+                                                   {
+                                                       @readonly =
+                                                   "readonly",
+                                                       @class = "form-control",
+                                                       @placeholder = "Bandara Berangkat",
+                                                       @type = "text"
+                                                })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5 col-md-offset-1">
+                                            <div id="ketikPass" class="form-group ">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-plane fa-lg detailDashIcon" aria-hidden="true"></i>
+                                                    </span>
+                                                    <label for="nama " class="control-label">
+                                                        Pajak Tujuan
+                                                    </label>
+                                                    @Html.TextBoxFor(u => u.rp_bandara_tujuan, new
+                                                    {
+                                                        @readonly =
+                                                 "readonly",
+                                                        @class = "form-control",
+                                                        @placeholder = "Bandara Tujuan",
+                                                        @type = "text"
+                                                    })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9" style="margin-top: 25px;">
+                                    <br> <label style="margin-left: 15px;"
+                                                class="control-label">Metode Pembayaran</label>
+                                    <hr class="garisbagian">
+                                </div>
+                                <div class="col-md-12" style="margin-top: -30px;">
+                                    <div class="col-md-12 ">
+                                        <div id="ketikEmail" class="form-group col-md-9">
+                                            <div class="input-group col-md-9">
+                                                <label for="metode " class="control-label">
+                                                    Metode
+                                                    Pembayaran
+                                                </label>
+                                                @Html.TextBoxFor(u => u.tblDetailTiket.pilihan_bank, new
+                                               {
+                                                    @readonly
+                                                = "readonly",
+                                                    @class = "form-control",
+                                                    @placeholder = "Bandara Tujuan",
+                                                    @type = "text"
+                                             })
+                                            </div>
+                                        </div>
+                                        <div id="ketikEmail" class="form-group col-md-5">
+                                            <div class="input-group col-md-8">
+                                                <label for="harga " class="control-label">
+                                                    Harga
+                                                    Tiket
+                                                </label>
+                                                @Html.TextBoxFor(u => u.rp_harga_tiket, new
+                                                {
+                                                    @readonly =
+                                             "readonly",
+                                                    @class = "form-control",
+                                                    @placeholder = "Bandara Tujuan",
+                                                   @type = "text"
+                                                })
+                                            </div>
+                                        </div>
+                                        <div id="ketikEmail"
+                                             class="form-group col-md-5 col-md-offset-1">
+                                            <div class="input-group col-md-8">
+                                                <label for="harga " class="control-label">
+                                                    Kotak
+                                                    Validasi
+                                                </label>
+                                                @if (Model.tblValidasi.pilihan_bank != null)
+                                                {
+                                                    <input class="form-control " name="harga" id="harga"
+                                                           placeholder="Biaya" type="text" value="Sudah Konfirmasi"
+                                                           readonly>
+                                                }
+                                                else
+                                                {
+                                                    <input class="form-control " name="harga" id="harga"
+                                                           placeholder="Biaya" type="text" value="Belum Konfirmasi"
+                                                           readonly>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div id="ketikEmail" class="form-group col-md-5 ">
+                                            <div class="input-group col-md-8">
+                                                <label for="harga " class="control-label">
+                                                    Uang
+                                                    Transfer
+                                                </label>
+                                                @Html.TextBoxFor(u => u.rp_total_transfer, new
+                                               {
+                                                   @id = "uangtf",
+                                               @readonly = "readonly",
+                                                   @class = "form-control",
+                                                   @placeholder =
+                                               "Bandara Tujuan",
+                                                   @type = "text"
+                                               })
+                                            </div>
+                                        </div>
+                                        <div style="margin-top: 60px;" class="col-md-6 ">
+                                            <div class="input-group col-md-8">
+                                                <div class="togglebutton">
+                                                    <label for="lunasCheck">
+                                                        @if (Model.tblDetailTiket.total_transfer ==
+                                                        Model.tblDetailTiket.harga_tiket)
+                                                        {
+                                                            <input type="checkbox" id="lunasCheck" checked />
+                                                            <label id="labelCheck" for=""> Lunas</label>
+                                                        }
+                                                        else
+                                                        {
+                                                            <input type="checkbox" id="lunasCheck" />
+                                                            <label id="labelCheck" for=""> Belum Lunas</label>
+                                                        }
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="padding-bottom: 30px; padding-top: 60px; padding-left:20px;"
+                                 class="col-md-10 col-md-offset-1">
+                                <a style="color: white !important; background-color: #ef5350 !important;"
+                                   href="#" class="btn btn-raised col-md-10" data-toggle="modal"
+                                   data-target="#modal">Hapus Pembeli</a>
+                                <div style="padding-left: 25px;" class="col-md-offset-2">
+                                    <a class=" btn btn-raised btn-info btn-md"
+                                       href="@Url.Action("semua_pembeli", "Admin")">
+                                        Kembali
+                                    </a>
+                                    <button style="margin-left: 10px;"
+                                            class="btn btn-raised btn-primary " type="submit">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                            <div style="padding-top: 140px;" id="modal" class="modal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal"
+                                                    aria-hidden="true"></button>
+                                            <h4 class="modal-title">Hapus Data Peserta</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>
+                                                Anda yakin akan menghapus @Html.DisplayTextFor(u =>
+u.tblPembeli.nm_pembeli)
+                                                dari daftar penerbangan ?
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-raised btn-primary"
+                                                    data-dismiss="modal">
+                                                Batal
+                                            </button>
+                                            <button style="color: white !important; background-color: #ef5350
+!important;"
+                                                    type="button" class="btn btn-raised btn-primary" data-dismiss="modal" id="btnHapus">
+                                                Hapus peserta
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <br> <br> <br> <br>
+                    </div>
+                </div>
+            </div>
+</body>
+@Html.Partial("_Footer")
+<script>
+$(document).ready(function () {
+$("#lunasCheck").change(function () {
+if (this.checked) {
+console.log("Dicekliks");
+$("#labelCheck").html("Lunas");
+$("#uangtf").val("@Html.DisplayTextFor(u
+=>u.rp_harga_tiket)");
+}
+else {
+console.log("Kaga diceklis");
+$("#labelCheck").html("Belum Lunas");
+$("#uangtf").val(convertToRupiah(0));
+}
+});
+function convertToRupiah(angka) {
+var rupiah = '';
+var angkarev = angka.toString().split('').reverse().join('');
+for (var i = 0; i < angkarev.length; i++) if (i % 3 == 0)
+rupiah += angkarev.substr(i, 3) + '.';
+return 'Rp. ' + rupiah.split('', rupiah.length - 1)
+.reverse().join('') + ',00';
+}
+$("#btnHapus")
+.click(
+function () {
+var request = $
+.ajax({
+url: "@Url.Action("delete_pembeli", "Admin",
+new { id = Model.tblPembeli.id_pembeli } )",
+type: "POST",
+success: function (
+data,
+textStatus) {
+window.location.href = "@Url.Action("semua_pembeli", "Admin")";
+}
+});
+})
+});
+</script>

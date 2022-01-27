@@ -1,0 +1,116 @@
+﻿@Html.Partial("_HeaderAdmin")
+@model tiket_reservation.Models.Statistik
+<div style="padding-top: 55px;" class="container">
+    <div class="col-md-11 well col-md-offset-2">
+        <div class="col-md-11">
+            <h1 class="judul">
+                <i style="padding-right: 30px;"
+                   class="fa fa-area-chart fa-fw fa-lg" aria-hidden="true"></i>
+                Statistik Penjualan Tiket
+            </h1>
+            <hr class="">
+        </div>
+        <div style="padding-left: 15px;" class="col-md-5">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Jumlah Penjualan Tiket</h3>
+                </div>
+                <div class="panel-body panel-dashboard-chart">
+                    <ul class="tulisTiket" style="padding-left: 15px;">
+                        <li class="panah" style="list-style-type: none;">
+                            Tiket
+                            Terjual <code class="" style="margin-left: 10px;">
+                                @Html.DisplayFor(u
+=> u.total_user)
+                            </code>
+                            Tiket
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Jumlah Status Tiket Terbayar</h3>
+                </div>
+                <div class="panel-body panel-dashboard-chart">
+                    <ul class="tulisTiket" style="padding-left: 15px;">
+                        <li class="panah" style="list-style-type: none;">
+                            Jumlah Tiket
+                            Lunas <code class="" style="margin-left: 35px;">
+                                @Html.DisplayFor(u
+=> u.user_lunas)
+                            </code>
+                            Tiket
+                        </li>
+                        <li class="panah" style="list-style-type: none;">
+                            Jumlah Belum
+                            Lunas <code class="" style="margin-left: 23px;">
+                                @Html.DisplayFor(u
+    => u.user_belum_lunas)
+                            </code>
+                            Tiket
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="padding-right: 30px;" class="col-md-7 ">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Statistik Total Penerimaan Uang</h3>
+                </div>
+                <div class="panel-body">
+                    <ul class="tulisTiket" style="padding-left: 15px;">
+                        <li class="panah" style="list-style-type: none;">
+                            Total
+                            Estimasi Pendapatan <code class="" style="margin-left:
+50px;">@Html.DisplayFor(u => u.uang_estimasi)</code>
+</li>
+<li class="panah" style="list-style-type: none;">
+    Jumlah Uang
+    Diterima <code class="" style="margin-left:
+80px;">@Html.DisplayFor(u => u.uang_diterima)</code>
+</li>
+<li class="panah" style="list-style-type: none;">
+    Total Sisa
+    Uang Belum Dibayar <code class="" style="margin-left:
+22px;">@Html.DisplayFor(u => u.selisiPendapatan)</code>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div style="padding-right: 30px;" class="col-md-7 ">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3 class="panel-title">Kotak Pesan</h3>
+        </div>
+        <div class="panel-body">
+            <ul class="tulisTiket" style="padding-left: 15px;">
+                <li class="panah" style="list-style-type: none;">
+                    Kotak
+                    Validasi Tiket <code class="" style="margin-left: 10px;">
+                        @Html.DisplayFor(u => u.user_validasi)
+                    </code>
+                    Tiket pesan
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="padding-right: 30px; float: right;" class="col-md-6
+">
+    <div class="panel-body">
+        <a href="@Url.Action("log_out", "admin")" style="margin-left: 10px;"
+           class="btn btn-primary btn-raised">Log out</a>
+        <a href="@Url.Action("dashboard_admin", "admin")" style="margin-left: 10px;" class="btn btn-primary btn-raised">
+            Segarkan
+            Statistik
+        </a>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+@Html.Partial("_Footer")

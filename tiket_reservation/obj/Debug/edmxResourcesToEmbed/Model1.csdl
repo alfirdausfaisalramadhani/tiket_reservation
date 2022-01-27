@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tiket_reservationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="id_admin" />
+    </Key>
+    <Property Name="id_admin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_admin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email_admin" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pass_admin" Type="String" MaxLength="225" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="detil_pesan_tiket">
+    <Key>
+      <PropertyRef Name="id_pembeli" />
+    </Key>
+    <Property Name="prefix" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="id_pembeli" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_pembeli" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="harga_tiket" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="total_transfer" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="pilihan_bank" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="bandara_berangkat" Type="Int32" Nullable="false" />
+    <Property Name="bandara_tujuan" Type="Int32" Nullable="false" />
+    <Property Name="status" Type="Int32" />
+    <NavigationProperty Name="pajak_bandara" Relationship="Self.FK_detil_pesan_tiket_pajak_bandara_berangkat" FromRole="detil_pesan_tiket" ToRole="pajak_bandara" />
+    <NavigationProperty Name="pajak_bandara1" Relationship="Self.FK_detil_pesan_tiket_pajak_bandara_tujuan" FromRole="detil_pesan_tiket" ToRole="pajak_bandara" />
+  </EntityType>
+  <EntityType Name="pajak_bandara">
+    <Key>
+      <PropertyRef Name="id_bandara" />
+    </Key>
+    <Property Name="id_bandara" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_bandara" Type="String" MaxLength="225" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pajak" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <NavigationProperty Name="detil_pesan_tiket" Relationship="Self.FK_detil_pesan_tiket_pajak_bandara_berangkat" FromRole="pajak_bandara" ToRole="detil_pesan_tiket" />
+    <NavigationProperty Name="detil_pesan_tiket1" Relationship="Self.FK_detil_pesan_tiket_pajak_bandara_tujuan" FromRole="pajak_bandara" ToRole="detil_pesan_tiket" />
+  </EntityType>
+  <EntityType Name="pembeli">
+    <Key>
+      <PropertyRef Name="id_pembeli" />
+    </Key>
+    <Property Name="prefix" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="id_pembeli" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_pembeli" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email_pembeli" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hp_pembeli" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="gd_pembeli" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pembeli_validasi">
+    <Key>
+      <PropertyRef Name="id_pembeli" />
+    </Key>
+    <Property Name="id_pembeli" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_pembeli" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email_pembeli" Type="String" MaxLength="225" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="hp_pembeli" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="uang_transfer_validasi" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="pilihan_bank" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="tgl_pesan">
+    <Key>
+      <PropertyRef Name="id_pembeli" />
+    </Key>
+    <Property Name="prefix" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="id_pembeli" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_pembeli" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tgl_order" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_detil_pesan_tiket_pajak_bandara_berangkat">
+    <End Role="pajak_bandara" Type="Self.pajak_bandara" Multiplicity="1" />
+    <End Role="detil_pesan_tiket" Type="Self.detil_pesan_tiket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pajak_bandara">
+        <PropertyRef Name="id_bandara" />
+      </Principal>
+      <Dependent Role="detil_pesan_tiket">
+        <PropertyRef Name="bandara_berangkat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detil_pesan_tiket_pajak_bandara_tujuan">
+    <End Role="pajak_bandara" Type="Self.pajak_bandara" Multiplicity="1" />
+    <End Role="detil_pesan_tiket" Type="Self.detil_pesan_tiket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pajak_bandara">
+        <PropertyRef Name="id_bandara" />
+      </Principal>
+      <Dependent Role="detil_pesan_tiket">
+        <PropertyRef Name="bandara_tujuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="tiket_reservationEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admin" EntityType="Self.admin" />
+    <EntitySet Name="detil_pesan_tiket" EntityType="Self.detil_pesan_tiket" />
+    <EntitySet Name="pajak_bandara" EntityType="Self.pajak_bandara" />
+    <EntitySet Name="pembeli" EntityType="Self.pembeli" />
+    <EntitySet Name="pembeli_validasi" EntityType="Self.pembeli_validasi" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="tgl_pesan" EntityType="Self.tgl_pesan" />
+    <AssociationSet Name="FK_detil_pesan_tiket_pajak_bandara_berangkat" Association="Self.FK_detil_pesan_tiket_pajak_bandara_berangkat">
+      <End Role="pajak_bandara" EntitySet="pajak_bandara" />
+      <End Role="detil_pesan_tiket" EntitySet="detil_pesan_tiket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detil_pesan_tiket_pajak_bandara_tujuan" Association="Self.FK_detil_pesan_tiket_pajak_bandara_tujuan">
+      <End Role="pajak_bandara" EntitySet="pajak_bandara" />
+      <End Role="detil_pesan_tiket" EntitySet="detil_pesan_tiket" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

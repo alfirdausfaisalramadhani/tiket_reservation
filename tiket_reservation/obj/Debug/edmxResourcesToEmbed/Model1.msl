@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tiket_reservationModelStoreContainer" CdmEntityContainer="tiket_reservationEntities1">
+    <EntitySetMapping Name="admin">
+      <EntityTypeMapping TypeName="tiket_reservationModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="id_admin" ColumnName="id_admin" />
+          <ScalarProperty Name="nm_admin" ColumnName="nm_admin" />
+          <ScalarProperty Name="email_admin" ColumnName="email_admin" />
+          <ScalarProperty Name="pass_admin" ColumnName="pass_admin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="detil_pesan_tiket">
+      <EntityTypeMapping TypeName="tiket_reservationModel.detil_pesan_tiket">
+        <MappingFragment StoreEntitySet="detil_pesan_tiket">
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="id_pembeli" ColumnName="id_pembeli" />
+          <ScalarProperty Name="nm_pembeli" ColumnName="nm_pembeli" />
+          <ScalarProperty Name="harga_tiket" ColumnName="harga_tiket" />
+          <ScalarProperty Name="total_transfer" ColumnName="total_transfer" />
+          <ScalarProperty Name="pilihan_bank" ColumnName="pilihan_bank" />
+          <ScalarProperty Name="bandara_berangkat" ColumnName="bandara_berangkat" />
+          <ScalarProperty Name="bandara_tujuan" ColumnName="bandara_tujuan" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pajak_bandara">
+      <EntityTypeMapping TypeName="tiket_reservationModel.pajak_bandara">
+        <MappingFragment StoreEntitySet="pajak_bandara">
+          <ScalarProperty Name="id_bandara" ColumnName="id_bandara" />
+          <ScalarProperty Name="nm_bandara" ColumnName="nm_bandara" />
+          <ScalarProperty Name="pajak" ColumnName="pajak" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pembeli">
+      <EntityTypeMapping TypeName="tiket_reservationModel.pembeli">
+        <MappingFragment StoreEntitySet="pembeli">
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="id_pembeli" ColumnName="id_pembeli" />
+          <ScalarProperty Name="nm_pembeli" ColumnName="nm_pembeli" />
+          <ScalarProperty Name="email_pembeli" ColumnName="email_pembeli" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="hp_pembeli" ColumnName="hp_pembeli" />
+          <ScalarProperty Name="gd_pembeli" ColumnName="gd_pembeli" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pembeli_validasi">
+      <EntityTypeMapping TypeName="tiket_reservationModel.pembeli_validasi">
+        <MappingFragment StoreEntitySet="pembeli_validasi">
+          <ScalarProperty Name="id_pembeli" ColumnName="id_pembeli" />
+          <ScalarProperty Name="nm_pembeli" ColumnName="nm_pembeli" />
+          <ScalarProperty Name="email_pembeli" ColumnName="email_pembeli" />
+          <ScalarProperty Name="hp_pembeli" ColumnName="hp_pembeli" />
+          <ScalarProperty Name="uang_transfer_validasi" ColumnName="uang_transfer_validasi" />
+          <ScalarProperty Name="pilihan_bank" ColumnName="pilihan_bank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="tiket_reservationModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tgl_pesan">
+      <EntityTypeMapping TypeName="tiket_reservationModel.tgl_pesan">
+        <MappingFragment StoreEntitySet="tgl_pesan">
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="id_pembeli" ColumnName="id_pembeli" />
+          <ScalarProperty Name="nm_pembeli" ColumnName="nm_pembeli" />
+          <ScalarProperty Name="tgl_order" ColumnName="tgl_order" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

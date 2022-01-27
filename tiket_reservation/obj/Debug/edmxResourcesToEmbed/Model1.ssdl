@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tiket_reservationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="id_admin" />
+    </Key>
+    <Property Name="id_admin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_admin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email_admin" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="pass_admin" Type="varchar" MaxLength="225" Nullable="false" />
+  </EntityType>
+  <EntityType Name="detil_pesan_tiket">
+    <Key>
+      <PropertyRef Name="id_pembeli" />
+    </Key>
+    <Property Name="prefix" Type="varchar" MaxLength="2" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="id_pembeli" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_pembeli" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="harga_tiket" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="total_transfer" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="pilihan_bank" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="bandara_berangkat" Type="int" Nullable="false" />
+    <Property Name="bandara_tujuan" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" />
+  </EntityType>
+  <EntityType Name="pajak_bandara">
+    <Key>
+      <PropertyRef Name="id_bandara" />
+    </Key>
+    <Property Name="id_bandara" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_bandara" Type="varchar" MaxLength="225" Nullable="false" />
+    <Property Name="pajak" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pembeli">
+    <Key>
+      <PropertyRef Name="id_pembeli" />
+    </Key>
+    <Property Name="prefix" Type="varchar" MaxLength="3" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="id_pembeli" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_pembeli" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="email_pembeli" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="hp_pembeli" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="gd_pembeli" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="pembeli_validasi">
+    <Key>
+      <PropertyRef Name="id_pembeli" />
+    </Key>
+    <Property Name="id_pembeli" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_pembeli" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="email_pembeli" Type="varchar" MaxLength="225" Nullable="false" />
+    <Property Name="hp_pembeli" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="uang_transfer_validasi" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="pilihan_bank" Type="varchar" MaxLength="225" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tgl_pesan">
+    <Key>
+      <PropertyRef Name="id_pembeli" />
+    </Key>
+    <Property Name="prefix" Type="varchar" MaxLength="3" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="id_pembeli" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_pembeli" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="tgl_order" Type="varchar" MaxLength="300" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_detil_pesan_tiket_pajak_bandara_berangkat">
+    <End Role="pajak_bandara" Type="Self.pajak_bandara" Multiplicity="1" />
+    <End Role="detil_pesan_tiket" Type="Self.detil_pesan_tiket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pajak_bandara">
+        <PropertyRef Name="id_bandara" />
+      </Principal>
+      <Dependent Role="detil_pesan_tiket">
+        <PropertyRef Name="bandara_berangkat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_detil_pesan_tiket_pajak_bandara_tujuan">
+    <End Role="pajak_bandara" Type="Self.pajak_bandara" Multiplicity="1" />
+    <End Role="detil_pesan_tiket" Type="Self.detil_pesan_tiket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="pajak_bandara">
+        <PropertyRef Name="id_bandara" />
+      </Principal>
+      <Dependent Role="detil_pesan_tiket">
+        <PropertyRef Name="bandara_tujuan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_detil_pesan_tiket_tgl_pesan' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_detil_pesan_tiket_tgl_pesan" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_pembeli_validasi_detil_pesan_tiket' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_pembeli_validasi_detil_pesan_tiket" />-->
+  <!--Errors Found During Generation:
+warning 6035: The relationship 'FK_tgl_pesan_pembeli_1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="FK_tgl_pesan_pembeli_1" />-->
+  <EntityContainer Name="tiket_reservationModelStoreContainer">
+    <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="detil_pesan_tiket" EntityType="Self.detil_pesan_tiket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pajak_bandara" EntityType="Self.pajak_bandara" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pembeli" EntityType="Self.pembeli" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pembeli_validasi" EntityType="Self.pembeli_validasi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tgl_pesan" EntityType="Self.tgl_pesan" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_detil_pesan_tiket_pajak_bandara_berangkat" Association="Self.FK_detil_pesan_tiket_pajak_bandara_berangkat">
+      <End Role="pajak_bandara" EntitySet="pajak_bandara" />
+      <End Role="detil_pesan_tiket" EntitySet="detil_pesan_tiket" />
+    </AssociationSet>
+    <AssociationSet Name="FK_detil_pesan_tiket_pajak_bandara_tujuan" Association="Self.FK_detil_pesan_tiket_pajak_bandara_tujuan">
+      <End Role="pajak_bandara" EntitySet="pajak_bandara" />
+      <End Role="detil_pesan_tiket" EntitySet="detil_pesan_tiket" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

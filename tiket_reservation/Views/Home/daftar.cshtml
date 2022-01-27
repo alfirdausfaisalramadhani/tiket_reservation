@@ -1,0 +1,305 @@
+﻿@model tiket_reservation.Models.Gabungan
+<body>
+    <div class="container ">
+        <div class="daftar col-md-8 col-md-offset-2 well ">
+            <div class="form-group" style="margin-bottom: -15px;">
+                <h1 class="judul col-md-9 col-md-offset-2"> Pembelian Tiket Pesawat</h1>
+                <i style="margin-top: 6px; margin-left:-110px;" class="fa fa-plane fa-5x"
+                   aria-hidden="true"></i>
+                <hr>
+            </div>
+            <div class="col-md-9 col-md-offset-1" style="margin-bottom: -15px;">
+                <br>
+                <label style="margin-left: 16px;" class="control-label ">
+                    Data Pribadi
+                </label>
+                <hr class="garisbagian">
+            </div>
+            <div class="col-md-12 col-md-offset-1">
+                @using (Html.BeginForm("daftar", "Home", FormMethod.Post, new
+                {
+                    @class =
+                "daftar form - horizontal text - center"
+                }))
+                {
+                    <div class="col-md-4">
+                        <div id="ketikEmail" class="form-group ">
+                            <div class="input-group ">
+                                <span class="input-group-addon"><i class="fa fa-user-circle-o fa-lg" ariahidden="true"></i></span>
+                                @Html.TextBoxFor(u => u.tblPembeli.nm_pembeli, new
+                                {
+                                    @required =
+                                "required",
+                                    @class = "form-control",
+                                    @placeholder = "Nama",
+                                    @type = "name"
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1">
+                        <div id="ketikPass" class="form-group ">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa-lg" ariahidden="true"></i></span>
+                                @Html.TextBoxFor(u => u.tblPembeli.email_pembeli, new
+                                {
+                                    @required =
+                                "required",
+                                    @class = "form-control",
+                                    @placeholder = "Email",
+                                    @type =
+                                "email"
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div id="ketikEmail" class="form-group @ViewBag.passTidakSama ">
+                            <div class="input-group ">
+                                <span class="input-group-addon"><i class="fa fa-eye-slash fa-lg" ariahidden="true"></i></span>
+                                @Html.TextBoxFor(u => u.tblPembeli.password, new
+                                {
+                                    @required = "required",
+                                @class = "form-control",
+                                    @placeholder = "Password",
+                                    @type = "password"
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1">
+                        <div id="ketikEmail" class="form-group @ViewBag.passTidakSama">
+                            <div class="input-group ">
+                                <span class="input-group-addon"><i class="fa fa-eye-slash fa-lg" ariahidden="true"></i></span>
+                                @Html.TextBoxFor(u => u.password_conf, new
+                                {
+                                    @required = "required",
+                                    @class
+                                = "form-control",
+                                    @placeholder = " Konfirmasi Password",
+                                    @type = "password"
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label style="margin-left: 40px; margin-top: 15px; color: #d32f2f
+!important; font-size:13px;">
+                            @ViewBag.errorMessage
+                        </label>
+                    </div>
+                    <div class="col-md-4 ">
+                        <div id="ketikEmail" class="form-group ">
+                            <div class="input-group ">
+                                <span class="input-group-addon"><i class="fa fa-phone-square fa-lg" ariahidden="true"></i></span>
+                                @Html.TextBoxFor(u => u.tblPembeli.hp_pembeli, new
+                                {
+                                    @required =
+                                "required",
+                                    @class = "form-control",
+                                    @placeholder = "No Handphone",
+                                    @type =
+                                "text"
+                                })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1">
+                        <div id="ketikPass" class="form-group ">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa-lg" ariahidden="true"></i></span>
+                                @Html.DropDownListFor(x => x.tblPembeli.gd_pembeli, new SelectListItem[]{
+                                new SelectListItem() {Text = "Laki - Laki", Value="Laki - Laki"},
+                                new SelectListItem() {Text = "Perempuan", Value="Perempuan"}}, "Pilih Gender", new { @required = "required", @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <br>
+                        <label class="control-label">
+                            Bandara Keberangkatan
+                        </label>
+                        <hr class="garisbagian">
+                    </div>
+                    <div class="col-md-12" style="margin-top: -30px;">
+                        <div class="col-md-12 ">
+                            <div id="ketikEmail" class="form-group col-md-8 ">
+                                <div class="input-group col-md-10">
+                                    <label for="metode " class="control-label">
+                                        Pilih Bandara Keberangkatan
+                                    </label>
+                                    @Html.DropDownListFor(x => x.tblDetailTiket.bandara_berangkat,
+                                    tiket_reservation.Controllers.HomeController.getBandara(), "Pilih Bandara Keberangkatan", new { @class = "form-control", @onchange = "keberangkatan(this.value);", @required = "required" })
+                                </div>
+                            </div>
+                            <div id="biayaBerangkatHide" class="form-group col-md-6 ">
+                                <div class="input-group col-md-8">
+                                    <label for="harga " class="control-label">
+                                        Biaya Keberangkatan
+                                    </label>
+                                    <input class="form-control " required name="harga" id="biayaBerangkat"
+                                           placeholder="Biaya Keberangkatan " type="text" value="" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <br>
+                        <label class="control-label">
+                            Bandara Tujuan
+                        </label>
+                        <hr class="garisbagian">
+                    </div>
+                    <div class="col-md-12" style="margin-top: -30px;">
+                        <div class="col-md-12 ">
+                            <div id="ketikEmail" class="form-group col-md-8 ">
+                                <div class="input-group col-md-10">
+                                    <label for="metode " class="control-label">
+                                        Pilih Bandara Tujuan
+                                    </label>
+                                    @Html.DropDownListFor(x => x.tblDetailTiket.bandara_tujuan,
+                                    tiket_reservation.Controllers.HomeController.getBandara(), "Pilih Bandara Tujuan", new
+                                         {
+                                             @class = "form-control",
+                                             @onchange = "tujuan(this.value); ",
+                                    @required = "required"
+                                         })
+                                </div>
+                            </div>
+                            <div id="biayaTujuanHide" class="form-group col-md-6 ">
+                                <div class="input-group col-md-8">
+                                    <label for="harga " class="control-label">
+                                        Biaya Tujuan
+                                    </label>
+                                    <input class="form-control " required name="harga" id="biayaTujuan"
+                                           placeholder="Biaya Tujuan" type="text" value="" readonly>
+                                </div>
+                            </div>
+                            <div id="ketikEmail" class="form-group col-md-6">
+                                <div class="input-group col-md-8">
+                                    <label for="harga " class="control-label">
+                                        Total Harga
+                                    </label>
+                                    @Html.TextBoxFor(u => u.rp_harga_tiket, new
+                                    {
+                                        @required = "required",
+                                    @readonly = "readonly",
+                                        @class = "form-control",
+                                        @placeholder = "Total  Harga",
+                                        @type = "text",
+                                        @id = "totalHarga"
+                                    })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <br>
+                        <label class="control-label">
+                            Pilih Metode Pembayaran
+                        </label>
+                        <hr class="garisbagian">
+                    </div>
+                    <div class="col-md-12" style="margin-top: -30px;">
+                        <div class="col-md-12 ">
+                            <div id="ketikEmail" class="form-group col-md-6">
+                                <div class="input-group col-md-12">
+                                    <label for="metode " class="control-label">
+                                        Pilih Metode Pembayaran
+                                    </label>
+                                    @Html.DropDownListFor(x => x.tblDetailTiket.pilihan_bank, new
+                                    SelectListItem[]{
+                                    new SelectListItem()
+                                            {
+                                                Text = "BCA NO. 98080986643 - Faisal Arkan",
+                                    Value = "BCA NO. 98080986643 - Faisal Arkan"},
+                                    new SelectListItem()
+                                            {
+                                                Text = "BRI NO. 78787878741 - Sativa Ken", Value = "BRI NO. 78787878741 - Sativa Ken"}}, "Pilih Bank Pembayaran", new
+                                                                    {
+                                                                        @class =
+                                    "form-control",
+                                                                        @required = "required"
+                                                                    })
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding-bottom: 60px; padding-left: 20px; padding-top:10px;"
+                             class="col-md-10 col-md-offset-2">
+                            <br>
+                            <br>
+                            <a class=" btn btn-raised btn-info btn-md" href="@Url.Action("login_user",
+"Home")"> Kembali </a>
+                            <button id="login" style="margin-left: 10px;" class="btn btn-raised btn-primary " type="submit"> Submit</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+@Html.Partial("_Footer")
+<script>
+    $("#biayaTujuanHide").hide();
+    $("#biayaBerangkatHide").hide();
+    function keberangkatan(idberangkat) {
+        console.log(idberangkat)
+        $.ajax({
+            type: "GET",
+            cache: false,
+            data: {id: idberangkat,
+},
+url: "@Url.Action("HargaBandara", "Home")",
+success: function (data, text) {
+$('#biayaBerangkat').val(data.harga)
+totalHarga();
+}
+});
+}
+function tujuan(idTujuan) {
+console.log(idTujuan)
+$.ajax({
+type: "GET",
+cache: false,
+dataType: 'json',
+data: {
+id: idTujuan,
+},
+url: "@Url.Action("HargaBandara", "Home")",
+success: function (data, text) {
+$('#biayaTujuan').val(data.harga);
+totalHarga();
+}
+});
+}
+function convertToAngka(rupiah) {
+return parseInt(rupiah.replace(/,.*|[^0-9]/g, ''), 10);
+}
+function toRp(angka) {
+var rev = parseInt(angka, 10).toString().split('').reverse().join('');
+var rev2 = '';
+for (var i = 0; i < rev.length; i++) {
+rev2 += rev[i];
+if ((i + 1) % 3 === 0 && i !== (rev.length - 1)) {
+rev2 += '.';
+}
+}
+        return 'Rp. ' + rev2.split('').reverse().join('') + ',00';
+    }
+function totalHarga() {
+var biayaBerangkat =
+parseFloat(convertToAngka($('#biayaBerangkat').val()));
+var biayaTujuan = parseFloat(convertToAngka($('#biayaTujuan').val()));
+let hargaTotal = biayaBerangkat + biayaTujuan;
+if (isNaN(hargaTotal)) {
+} else {
+console.log(hargaTotal);
+$('#totalHarga').val(toRp(hargaTotal));
+}
+}
+</script>
